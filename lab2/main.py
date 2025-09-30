@@ -3,7 +3,7 @@
 import math
 
 def z(x, eps=1e-12):
-    """Повертає значення виразу або None, якщо знаменник ~ 0 або невизначений."""
+
     denom = math.sin(3 * x) - x
     if abs(denom) < eps:
         return None
@@ -14,7 +14,7 @@ end = 7.8
 step = 0.9
 
 x = start
-# захист проти нескінченного циклу через похибки плаваючої точки
+
 max_iters = 1000
 it = 0
 
