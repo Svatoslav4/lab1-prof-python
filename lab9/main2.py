@@ -7,7 +7,7 @@ try:
          open(output_file, "w", encoding="utf-8") as out:
 
         for line in inp:
-            if len(line.strip()) > 30:  # перевірка довжини без пробілів з кінця
+            if len(line.strip()) > 30:
                 out.write(line)
 
     print("✅ Рядки успішно переписані у файл:", output_file)

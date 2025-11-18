@@ -1,6 +1,6 @@
 import os
 
-# ✅ Створення файлу з даними студентів
+
 def create_file(filename):
     students = [
         ("Іваненко Іван", 89),
@@ -14,14 +14,14 @@ def create_file(filename):
     print(f"Файл '{filename}' створено ✅")
 
 
-# ✅ Дозапис у файл
+
 def append_student(filename, name, grade):
     with open(filename, "a", encoding="utf-8") as file:
         file.write(f"{name};{grade}\n")
     print("Студента додано ✅")
 
 
-# ✅ Читання файлу
+
 def read_file(filename):
     print("\n📌 Дані студентів:")
     with open(filename, "r", encoding="utf-8") as file:
@@ -29,7 +29,7 @@ def read_file(filename):
             print(line.strip())
 
 
-# ✅ Пошук файлів у каталозі
+
 def search_files(directory, filename_part):
     print("\n🔍 Пошук файлів у каталозі:")
     for file in os.listdir(directory):
@@ -37,7 +37,7 @@ def search_files(directory, filename_part):
             print("Знайдено:", file)
 
 
-# ✅ Пошук студента у файлі
+
 def find_student(filename, student_name):
     print(f"\n🔍 Пошук студента: {student_name}")
     with open(filename, "r", encoding="utf-8") as file:
@@ -52,7 +52,7 @@ def find_student(filename, student_name):
             print("Студента не знайдено ❌")
 
 
-# ✅ Сортування за середнім балом
+
 def sort_by_grade(filename):
     with open(filename, "r", encoding="utf-8") as file:
         data = []
@@ -69,7 +69,7 @@ def sort_by_grade(filename):
     print("\n📊 Дані відсортовано за середнім балом (спаданням) ✅")
 
 
-# === ТЕСТ РОБОТИ ПРОГРАМИ ===
+
 filename = "students.txt"
 
 create_file(filename)
